@@ -1,0 +1,159 @@
+* {
+    font-family: monospace;
+    color: rgb(227, 135, 135);
+    /* background-color: #fff; */
+}
+
+body{
+    /* position: fixed; */
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #d6cece;
+}
+
+#container{
+    background-color: #333;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    justify-content: center;
+    border: 1px solid;
+}
+
+.box-1{
+    flex: 1;
+}
+
+.box-2{
+    flex: 2;
+    overflow:hidden;
+}
+
+.box-1, .box-2{
+    text-align: center;
+}
+.container div{
+    padding: 4px;
+    /* border: 1px solid; */
+}
+
+.title-card{
+    text-align: center;
+    border-bottom: 1px solid;
+}
+
+.game-details-card{
+    border-bottom: 1px solid;
+    background-color: #222;
+}
+
+.bottom{
+    display: flex;
+    flex-direction: column;
+    background-color: #222;
+    height: auto;   
+    justify-content: center;
+}
+
+.game-field{
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid;
+}
+
+.player-two-card, .player-one-card{
+    width: 65px;
+    height: 110.5px;
+    margin: auto;
+    margin-bottom: 10px;
+    min-width: 65px;
+    border: 2px solid;
+}
+
+
+.player-one-hand{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    width: 76.6px;
+    height: 122.1px;
+    min-width: 65px;
+    margin: auto;
+    background-color: rgb(78, 46, 46);
+}
+
+.row{
+    display: flex;
+    border: none;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.btn{
+    padding: 10px;
+    margin: auto;
+    border-radius: 0%;
+    background-color: #222;
+    border: 1px solid  rgb(227, 135, 135);
+    box-shadow: 2px 4px 4px rgb(78, 46, 46);
+}
+
+.btn:hover{
+    background-color: #333;
+}
+
+.new-btn{
+    margin: auto;
+    min-width: 40%;  
+}
+
+/* Animations */
+@keyframes p1-discard {
+    12.5% {
+        translate: -5px;
+    }
+    50%{
+        translate: 20px;
+        opacity: .5;
+    }
+    75%{
+        translate: 40px;
+        opacity: .25;
+    }
+    100%{
+        translate: 60px;
+        opacity: 0;
+    }
+}
+
+@keyframes p2-discard {
+    12.5% {
+        translate: 5px;
+    }
+    50%{
+        translate: -20px;
+        opacity: .5;
+    }
+    75%{
+        translate: -40px;
+        opacity: .25;
+    }
+    100%{
+        translate: -60px;
+        opacity: 0;
+    }
+}

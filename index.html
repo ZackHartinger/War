@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="/images/ace.png">
+</head>
+
+<body onload="newGame()">
+    <div class="main">
+        <div class="container" id="container">
+            <div class="title-card">
+                <div class="title">
+                    <h1>War</h1>
+                </div>
+                <div class="description">
+                    <p></p>
+                </div>
+            </div>
+            <div class="game-details-card">
+                <div class="current-player-info">
+                    <label for="currentPlayer">Current Player: <span id="currentPlayer"></span></label>
+                </div>
+            </div>
+            <div class="game-field">
+                <div class="row">
+                    <div class="box-1">
+                        <h3 class="player-info">Player Two Cards: <span id="player-two-hand-length"></span></h3>
+                    </div>
+                    <div class="box-2">
+                        <div id="player-two-card" class="player-two-card">
+                            <p id="player-two-card-details"></p>
+                        </div>
+                    </div>
+                    <div class="box-1">
+                        <h3 id="winner-display"></h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="box-1">
+                        <h3 class="player-info">Player One Cards: <span id="player-one-hand-length"></span></h3>
+    
+                    </div>
+                    <div class="box-2">
+                        <div id="player-one-card" class="player-one-card" ondragover="allowDrop(event)" ondrop="hit()">
+                            <p id="player-one-card-details"></p>
+                        </div>
+                    </div>
+                    <div class="box-1">
+                        <button class="btn" id="hit-btn" onclick="hit()">Hit</button>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom">
+                <div class="row">
+                    <div id="player-one-hand" class="player-one-hand">
+                        <!-- <div draggable="true" class="player-one-card"></div> -->
+                    </div>
+                </div>
+                <div class="row">
+                    <button class="btn new-btn" onclick="newGame()">New Game</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="script.js"></script>
